@@ -10,7 +10,7 @@ on:
 
   workflow_dispatch:
 env:
-  TZ: 'America/Montreal'
+  TZ: 'Europe/Amsterdam'
 
 jobs:
   sync:
