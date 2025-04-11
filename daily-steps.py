@@ -8,13 +8,13 @@ def get_all_daily_steps(garmin):
     """
     Get last x days of daily step count data from Garmin Connect.
     """
-    # startdate = date.today() - timedelta(days=1)
-    # daterange = [startdate + timedelta(days=x) 
-    #              for x in range((date.today() - startdate).days)] # excl. today
+    startdate = date.today() - timedelta(days=30)
+    daterange = [startdate + timedelta(days=x) 
+                 for x in range((date.today() - startdate).days)] # excl. today
 
-    startdate = date.today() - timedelta(days=1)  # Start from yesterday
-    enddate = date.today()  # Include today
-    daterange = [startdate + timedelta(days=x) for x in range((enddate - startdate).days + 1)]
+    # startdate = date.today() - timedelta(days=1)  # Start from yesterday
+    # enddate = date.today()  # Include today
+    # daterange = [startdate + timedelta(days=x) for x in range((enddate - startdate).days + 1)]
     
     daily_steps = []
     for d in daterange:
